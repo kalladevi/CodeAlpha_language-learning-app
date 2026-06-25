@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Language Learning App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Language Learning App</h1>
+
+    <div class="tabs">
+        <button onclick="showSection('flashcards')">Flashcards</button>
+        <button onclick="showSection('quiz')">Quiz</button>
+    </div>
+
+    <div id="flashcards">
+        <h2>Daily Lesson</h2>
+
+        <div class="card">
+            <h3 id="word">Hola</h3>
+            <p id="translation">Hello</p>
+            <button onclick="speakWord()">🔊 Pronounce</button>
+        </div>
+
+        <button onclick="nextCard()">Next Word</button>
+    </div>
+
+    <div id="quiz" style="display:none;">
+        <h2>Quiz</h2>
+
+        <p>What is the meaning of "Gracias"?</p>
+
+        <button onclick="checkAnswer('Thank You')">
+            Thank You
+        </button>
+
+        <button onclick="checkAnswer('Sorry')">
+            Sorry
+        </button>
+
+        <button onclick="checkAnswer('Hello')">
+            Hello
+        </button>
+
+        <p id="result"></p>
+    </div>
+
+    <h3>Progress: <span id="score">0</span></h3>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
